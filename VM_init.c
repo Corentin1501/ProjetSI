@@ -9,7 +9,7 @@ float angley = 0.0f;
 
 // coordonnées de la caméra
 float camera_x = 0.0f;      
-float camera_y = -5.04/2.0; 
+float camera_y = -1; 
 float camera_z = -12.0f;
 
 void VM_init(){
@@ -18,7 +18,6 @@ void VM_init(){
     glLoadIdentity();
 
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
 
     glEnable(GL_LIGHTING);
     glEnable(GL_COLOR_MATERIAL);
@@ -59,5 +58,31 @@ void VM_init(){
             glLightfv(GL_LIGHT0, GL_DIFFUSE,  light_0_diffuse); 
             glLightfv(GL_LIGHT0, GL_SPECULAR, light_0_specular); 
             glLightfv(GL_LIGHT0, GL_POSITION, light_0_position); 
+
+        //######### LUMIERE 1 (POSITIONNELLE) ######### en (-13,4,-13) rouge
+
+            GLfloat light_1_ambient[]  = { 0.1,   0,   0,  1 };
+            GLfloat light_1_diffuse[]  = {   1,   0,   0,  1 };
+            GLfloat light_1_specular[] = {   1,   1,   1,  1 };
+            GLfloat light_1_position[] = { -13,   4, -13,  1 };
+
+            glEnable(GL_LIGHT1);
+            glLightfv(GL_LIGHT1, GL_AMBIENT,  light_1_ambient);
+            glLightfv(GL_LIGHT1, GL_DIFFUSE,  light_1_diffuse);
+            glLightfv(GL_LIGHT1, GL_SPECULAR, light_1_specular);
+            glLightfv(GL_LIGHT1, GL_POSITION, light_1_position);
+
+        //######### LUMIERE 2 (POSITIONNELLE) ######### en (13,4,13) bleu
+
+            GLfloat light_2_ambient[]  = { 0.05, 0.05, 0.05,  1 };
+            GLfloat light_2_diffuse[]  = {    0,    0,    1,  1 };
+            GLfloat light_2_specular[] = {    1,    1,    1,  1 };
+            GLfloat light_2_position[] = {   13,    1,   13,  1 };
+
+            glEnable(GL_LIGHT2);
+            glLightfv(GL_LIGHT2, GL_AMBIENT,  light_2_ambient);
+            glLightfv(GL_LIGHT2, GL_DIFFUSE,  light_2_diffuse);
+            glLightfv(GL_LIGHT2, GL_SPECULAR, light_2_specular);
+            glLightfv(GL_LIGHT2, GL_POSITION, light_2_position);
 
 }

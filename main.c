@@ -21,7 +21,7 @@ GLvoid Modelisation()
 {
     VM_init();
 
-    const char* filePath = "/home/etud/Documents/S6/STAGE/ProjetSI/modele-blend/Camion/Camion.obj";
+    const char* filePath = "/home/etud/Documents/S6/STAGE/ProjetSI/modeles/Camion/Camion.obj";
     unsigned int flags = aiProcess_Triangulate | aiProcess_FlipUVs | aiProcess_GenNormals;
 
     const struct aiScene* scene = aiImportFile(filePath, flags);
