@@ -25,7 +25,7 @@ int notre_init(int argc, char** argv, void (*Modelisation)())
 
     glutInitWindowSize(992, 558);
     glutInitWindowPosition(0,0);
-    glutCreateWindow("Projet LEGO");
+    glutCreateWindow("Cars");
     glutDisplayFunc(Modelisation);
     glutIdleFunc(Modelisation);
     glutReshapeFunc(&Redimensionne);    
