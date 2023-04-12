@@ -33,7 +33,7 @@ int notre_init(int argc, char** argv, void (*Modelisation)())
     glutSpecialFunc(&touche);
     glClearColor(0,0,0,0);
 
-
+    
 
     glutMainLoop();
     return 1;
